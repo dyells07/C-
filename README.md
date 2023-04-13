@@ -10,7 +10,7 @@ To run this program, you need to have Visual Studio installed on your system.
 
 1. Clone this repository:
 
-git clone https://github.com/dyells07/C-Sharp-ASCII-Value-Finder.git
+git clone https://github.com/dyells07/C-
 
 
 2. Open the project in Visual Studio.
