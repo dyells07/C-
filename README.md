@@ -15,9 +15,9 @@ git clone https://github.com/dyells07/C-
 
 2. Open the project in Visual Studio.
 
-3. Build the solution.
+3. Build the project to compile the code.
+4. Run the project by pressing `F5` or by clicking on the green "Play" button in the toolbar.
 
-4. Run the program.
 
 ## Usage
 
