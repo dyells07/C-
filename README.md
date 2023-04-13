@@ -21,11 +21,11 @@ git clone https://github.com/dyells07/C-
 
 ## Usage
 
-1. Enter the character for which you want to find the ASCII value.
-
-2. Click on the "Find ASCII Value" button.
-
-3. The ASCII value of the entered character will be displayed.
+1. Enter the password when prompted (the default password is `code`).
+2. If the password is correct, the program will display a welcome message and prompt you to enter your name.
+3. After entering your name, the program will ask you to enter a character for which you want to find the ASCII value.
+4. After you enter the character, the program will display the ASCII value of the character.
+5. The program will continue to prompt you for characters until you choose to exit.
 
 ## Contributing
 
