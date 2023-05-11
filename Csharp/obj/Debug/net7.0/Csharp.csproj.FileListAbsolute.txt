@@ -1,0 +1,15 @@
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\bin\Debug\net7.0\Csharp.exe
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\bin\Debug\net7.0\Csharp.deps.json
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\bin\Debug\net7.0\Csharp.runtimeconfig.json
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\bin\Debug\net7.0\Csharp.dll
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\bin\Debug\net7.0\Csharp.pdb
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.csproj.AssemblyReference.cache
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.AssemblyInfoInputs.cache
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.AssemblyInfo.cs
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.csproj.CoreCompileInputs.cache
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.dll
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\refint\Csharp.dll
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.pdb
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\Csharp.genruntimeconfig.cache
+C:\Users\bhimk\OneDrive\Desktop\C # programs\Csharp\obj\Debug\net7.0\ref\Csharp.dll
