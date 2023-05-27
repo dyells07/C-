@@ -1,0 +1,190 @@
+//var builder = WebApplication.CreateBuilder(args);
+//var app = builder.Build();
+
+//app.Use(async (context, next) =>
+//{
+//    if (context.Request.Method == HttpMethods.Get && context.Request.Query["custom"] == "true")
+//    {
+//        context.Response.ContentType = "text/plain";
+//        await context.Response.WriteAsync("Custom Middleware\n");
+
+//    }
+//    await next();
+//}
+
+//    );
+
+//app.MapGet("/", () => "Hello Am Bipin Khanal");
+
+//app.Run();
+
+http://localhost:3000/?custom=true yo gare pachhi balla run hunchha 
+
+//app.Use(async (context, next) =>
+//{
+//    if (context.Request.Method == HttpMethods.Get && context.Request.Query["custom"] == "true")
+//    {
+//        Console.WriteLine("Custom middleware executed");
+//        context.Response.ContentType = "text/plain";
+//        await context.Response.WriteAsync("Custom Middleware\n");
+//    }
+//    await next();
+//}); 
+
+yo middleware class banayepachhi falera 
+
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+
+
+
+app.MapGet("/", () =>
+{
+    return "Hello";
+});
+
+app.Run();
+
+yo format ma rakhne 
+
+ MAILE SIMPLY CHAT GPT USE GAREKO
+namespace Core
+{
+    public class Middleware : IMiddleware
+    {
+        private RequestDelegate _next;
+
+        public Middleware(RequestDelegate next)
+        {
+            _next = next;
+        }
+
+        public async Task InvokeAsync(HttpContext context, Func<Task> next)
+        {
+            if (context.Request.Method == HttpMethods.Get && context.Request.Query["custom"] == "true")
+            {
+                if (!context.Response.HasStarted)
+                {
+                    context.Response.ContentType = "text/plain";
+                }
+
+                Console.WriteLine("Class Based Middleware");
+                await context.Response.WriteAsync("Class Based Middleware\n");
+            }
+            else 
+            {
+                await next();
+            }
+        }
+    }
+} 
+
+using Core;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.Use(async (context, next) =>
+{
+    await next();
+    context.Response.Headers.Add("X-Status-Code", context.Response.StatusCode.ToString());
+});
+
+app.UseMiddleware<Middleware>();
+
+app.MapGet("/", () =>
+{
+    return "Hello";
+});
+
+app.Run();
+
+//aba yo garesi status code dinchha
+using Core;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.Use(async (context, next) =>
+{
+    await next();
+    //context.Response.StatusCode = 200;
+    await context.Response.WriteAsync($"\nStatus Code: {context.Response.StatusCode}");
+});
+
+app.UseMiddleware<Middleware>();
+
+app.MapGet("/", () => "Hello World");
+
+app.Run();
+
+//yesle /short path dinchha 
+app.Use(async (context, next) =>
+{
+    //await next();
+    ////context.Response.StatusCode = 200;
+    //await context.Response.WriteAsync($"\nStatus Code: {context.Response.StatusCode}");
+    if(context.Request.Path=="/short")
+    {
+        await context.Response.WriteAsync("Required short-circuited");
+    }
+    else
+    {
+        await next();
+    }
+});
+
+//yesle branch 
+//((IApplicationBuilder)app).Map("/branch", branch =>
+//{
+//    branch.Use(async (HttpContext context, Func<Task> next) =>
+//    {
+//        await context.Response.WriteAsync("Branch Middleware");
+
+//    });
+
+//}
+//    );
+//yesle error diyeko chha 
+//app.MapGet("/fruit", async(HttpContext context, IOptions<FruitOptions> FruitOptions) =>
+//{
+//FruitOptions options = FruitOptions.Value;
+//    await context.Response.WriteAsync($"{options.Name},{options.Color}");
+//}
+//    );
+
+//yetti vaye pachhi pani formatter le kam garchha http://localhost:3000/formatter2 yo port ma 
+IResponseFormatter formatter =new TextResponseFormatter();
+app.MapGet("/formatter1", async context =>
+{
+    await formatter.Format(context, "Formatter 1");
+}
+    );
+
+app.MapGet("/formatter2", async context =>
+{
+    await formatter.Format(context, "Formatter 2");
+}
+    );
+
+    //yo gare pachhi ani http://localhost:3000/endpoint yo hanyo vane 
+    using Core.Services;
+
+namespace Core
+{
+    public class CustomEndpoint
+    {
+
+        public static async Task Endpoint(HttpContext context)
+        {
+            IResponseFormatter formatter = context.RequestServices.GetRequiredService<IResponseFormatter>();
+
+            await formatter.Format(context, "Custom Endpoint Middleware");
+        }
+    }
+}
+ //yo output aauchha web ma
+ Formatted Response 1
+Custom Endpoint Middleware,OK
