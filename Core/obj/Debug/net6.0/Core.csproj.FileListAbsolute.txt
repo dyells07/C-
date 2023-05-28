@@ -29,3 +29,5 @@ C:\Users\bhimk\source\repos\Core\Core\bin\Debug\net6.0\Microsoft.EntityFramework
 C:\Users\bhimk\source\repos\Core\Core\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\bhimk\source\repos\Core\Core\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\bhimk\source\repos\Core\Core\obj\Debug\net6.0\Core.csproj.CopyComplete
+C:\Users\bhimk\source\repos\Core\Core\bin\Debug\net6.0\Core.staticwebassets.runtime.json
+C:\Users\bhimk\source\repos\Core\Core\bin\Debug\net6.0\libman.json

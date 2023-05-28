@@ -7,21 +7,23 @@ namespace Core
     public class CustomMiddleware
     {
         private RequestDelegate _next;
-        private IResponseFormatter _formatter;
+        //private IResponseFormatter _formatter;
 
 
 
-        public CustomMiddleware(RequestDelegate next, IResponseFormatter formatter)
+        public CustomMiddleware(RequestDelegate next)
         {
             _next = next;
-            _formatter = formatter;
+            //_formatter = formatter;
 
         }
-        public async Task Invoke(HttpContext context)
+        public async Task Invoke(HttpContext context, IResponseFormatter formatter1, IResponseFormatter formatter2, IResponseFormatter formatter3)
         {
             if (context.Request.Path == "/middleware")
             {
-                await _formatter.Format(context, "Custom MiddleWare Used <h2>Fine!</h2>");
+                await formatter1.Format(context, "Custom MiddleWare 1 Used\n\n");
+                await formatter2.Format(context, "Custom MiddleWare 2 Used\n\n");
+                await formatter3.Format(context, "Custom MiddleWare 3 Used ");
 
             }
 

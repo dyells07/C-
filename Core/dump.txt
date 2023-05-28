@@ -188,3 +188,76 @@ namespace Core
  //yo output aauchha web ma
  Formatted Response 1
 Custom Endpoint Middleware,OK
+
+//in appsettings.Development.json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "Microsoft.AspNetCore": "Information"
+    }
+  }
+}
+
+"Default": "Debug", give me more options
+
+Sure, here are some other options you can use for the "Default" log level:
+
+Trace
+Information
+Warning
+Error
+Critical
+The log level you choose will determine the amount of detail that is logged. A log level of "Debug" will log the most detailed information, while a log level of "Critical" will only log the most severe errors.
+
+Keep in mind that the appropriate log level to use will depend on the specific needs of your application. For example, during development, you may want to use a log level of "Debug" to help diagnose issues, but in production, you may want to use a log level of "Warning" or higher to avoid cluttering the logs with too much information.
+
+
+//yo vayo vane browser ma Debug matlab appsetting ma je chha tehi dinchha 
+app.MapGet("/config", async (HttpContext context, IConfiguration config) =>
+{
+    string defaultDebug = config["Logging:LogLevel:Default"];
+    await context.Response.WriteAsync(defaultDebug);
+
+});
+
+//yesma development vayekale development ko aayeko ho 
+  "profiles": {
+    "Core": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:7138;http://localhost:3000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+
+    //yedi yesma Development ko satto Production garyo vane appsetting.json ko ma vayeko Logging:LogLevel:Default ko value dinchha 
+
+    //yesle counter garchha kati patak reload vayo vanera ani counter garchha ani /clear garda chahi sabai delete ni hunchha gareko count haru jati sabai 
+    app.MapGet("/cookie",async context=>
+    {
+        int counter = int.Parse(context.Request.Cookies["counter"] ?? "0") + 1;
+        //int counter = context.Request.Cookies.Count;
+        context.Response.Cookies.Append(
+            "counter",
+            counter.ToString(),
+            new CookieOptions 
+            { 
+                MaxAge=TimeSpan.FromMinutes(30)
+            
+            }
+
+            );
+        await context.Response.WriteAsync($"Cookie:{counter}");
+
+});
+
+// yo nai ho /clear
+app.MapGet("/clear", context =>
+{
+    context.Response.Cookies.Delete("counter");
+    context.Response.Redirect("/");
+    return Task.CompletedTask;
+});
