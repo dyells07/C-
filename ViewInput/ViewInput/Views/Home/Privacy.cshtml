@@ -1,0 +1,100 @@
+﻿<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+            button[type="submit"]:hover {
+                background-color: #3e8e41;
+            }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    @using (Html.BeginForm(FormMethod.Post, new { id = "inputform" }))
+    {
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" />
+                <span id="name-error"></span>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="Address" />
+                <span id="address-error"></span>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    }
+
+
+ 
+
+    <h2>User Input</h2>
+
+    <p>Name: <span id="displayName"></span></p>
+    <p>Address: <span id="displayAddress"></span></p>
+
+    <script>
+        $(document).ready(function () {
+            $('#inputform').submit(function (event) {
+                event.preventDefault();
+
+                var name = $('#name').val();
+                var address = $('#address').val();
+
+                $('#displayName').text(name);
+                $('#displayAddress').text(address);
+            });
+        });
+    </script>
+</body>
+

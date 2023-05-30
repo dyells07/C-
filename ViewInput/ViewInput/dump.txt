@@ -1,0 +1,8 @@
+       //[HttpPost]
+    //public IActionResult DisplayInput(string name, string address)
+    //{
+    //   ViewBag.Name = name;
+    //   ViewBag.Address = address;
+    //    return View();
+    //    ///*return*/ RedirectToAction("Form");
+    //}

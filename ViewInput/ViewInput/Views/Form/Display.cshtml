@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Display";
+}
+@*@model UserModel*@
+
+<head>
+    <link rel="stylesheet" href="~/css/display.css" />
+
+</head>
+
+<div class="table-container">
+    <h4>User Input</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            
+        </tr>
+
+        @*used for using model*@
+@*       <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Address</td>
+        </tr>*@
+
+       @* used when only controller is used*@
+        @foreach (var user in ViewBag.UserList)
+        {
+            <tr>
+
+                <td>@user["Name"]</td>
+                <td>@user["Address"]</td>
+            </tr>
+        }
+      
+    </table>
+    <button onclick="location.href='@Url.Action("Index", "Form")'">Add Again</button>
+</div>
+
+
+

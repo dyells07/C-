@@ -1,0 +1,43 @@
+﻿
+@*it is used when we declared the model we have model name UserModel*@
+@model UserModel
+
+<head>
+    <link rel="stylesheet" href="~/css/form.css" />
+    <script src="~/js/script.js"></script>
+
+</head>
+
+@*@using (Html.BeginForm("Display", "Form", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Address)
+        @Html.TextBoxFor(model => model.Address)
+    </div>
+    <button type="submit">Submit</button>
+}*@
+
+
+@*it is used when we want to render directly by using controller*@
+<div class="form-container">
+    @using (Html.BeginForm("Display", "Form", FormMethod.Post, new { id = "inputform" }))
+    {
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" />
+            <span id="name-error" ></span>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="Address" />
+            <span id="address-error" ></span>
+        </div>
+
+        <button type="submit" onclick="return validateForm()">Submit</button>
+    }
+
+</div>
