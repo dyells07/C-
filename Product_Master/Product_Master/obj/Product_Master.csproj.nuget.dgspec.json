@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bhimk\\source\\repos\\Product_Master\\Product_Master\\Product_Master.csproj": {}
+    "G:\\Product_Master\\Product_Master\\Product_Master.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bhimk\\source\\repos\\Product_Master\\Product_Master\\Product_Master.csproj": {
+    "G:\\Product_Master\\Product_Master\\Product_Master.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bhimk\\source\\repos\\Product_Master\\Product_Master\\Product_Master.csproj",
+        "projectUniqueName": "G:\\Product_Master\\Product_Master\\Product_Master.csproj",
         "projectName": "Product_Master",
-        "projectPath": "C:\\Users\\bhimk\\source\\repos\\Product_Master\\Product_Master\\Product_Master.csproj",
+        "projectPath": "G:\\Product_Master\\Product_Master\\Product_Master.csproj",
         "packagesPath": "C:\\Users\\bhimk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bhimk\\source\\repos\\Product_Master\\Product_Master\\obj\\",
+        "outputPath": "G:\\Product_Master\\Product_Master\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\bhimk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

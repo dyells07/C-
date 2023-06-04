@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<head>
+    <title>Welcome to Product_Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-top: 100px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0069d9;
+            }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+            }
+    </style>
+</head>
+<body>
+    <div class="container"> <h1>Welcome to Product_Master</h1> <p>Product_Master is a web application designed to help businesses manage their product inventory. With this application, you can easily add, edit, and delete products, as well as view information such as product name, description, price, and quantity in stock.</p> <p>Our goal is to provide you with an intuitive and user-friendly interface that makes managing your product inventory as easy as possible. Whether you're a small business owner or a large retailer, Product_Master can help streamline your operations and improve your bottom line.</p> <a href="#" class="btn btn-primary">Sign up for an account</a> <a href="#" class="btn btn-secondary">Learn more</a> </div>
+</body>
